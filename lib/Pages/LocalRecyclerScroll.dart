@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:wellwasted2/Pages/Iventory.dart';
 import 'package:wellwasted2/Pages/LocalRecyclerDashBoard.dart';
 import 'package:wellwasted2/Pages/NotificationTab.dart';
 import 'package:wellwasted2/Pages/UserDashBoard.dart';
@@ -35,9 +36,9 @@ class _LocalRecyclerScrollPagesState extends State<LocalRecyclerScrollPages> {
             setState(() => _currentIndex = index);
           },
           children: <Widget>[
-            LocalRecyclerDashBoard(),
             NotificationTab(),
-            Container(color: Colors.blue,),
+            LocalRecyclerDashBoard(),
+            Inventory(),
           ],
         ),
       ),
@@ -49,16 +50,16 @@ class _LocalRecyclerScrollPagesState extends State<LocalRecyclerScrollPages> {
         },
         items: <BottomNavyBarItem>[
           BottomNavyBarItem(
-              title: Text('Home',style: TextStyle(color: Colors.black),),
-              icon: Icon(Icons.home, color: Colors.black,)
+              title: Text('Requests',style: TextStyle(color: Colors.black),),
+              icon: Icon(Icons.remove_from_queue, color: Colors.black,)
           ),
           BottomNavyBarItem(
-              title: Text('Notifications',style: TextStyle(color: Colors.black),),
-              icon: Icon(Icons.notifications,color: Colors.black,)
+              title: Text('Profile',style: TextStyle(color: Colors.black),),
+              icon: Icon(Icons.person,color: Colors.black,)
           ),
           BottomNavyBarItem(
-              title: Text('Settings',style: TextStyle(color: Colors.black),),
-              icon: Icon(Icons.settings,color: Colors.black,)
+              title: Text('Inventory',style: TextStyle(color: Colors.black),),
+              icon: Icon(Icons.local_convenience_store,color: Colors.black,)
           ),
         ],
       ),
