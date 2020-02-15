@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wellwasted2/Pages/UserDashBoard.dart';
+import 'Pages/PagesScroll.dart';
 
 void main(){
   runApp(MaterialApp(home: Home(),debugShowCheckedModeBanner: false,));
@@ -7,6 +8,6 @@ void main(){
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return UserDashBoard();
+    return ScrollPages();
   }
 }

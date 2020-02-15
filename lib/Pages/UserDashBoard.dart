@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wellwasted2/Models/DashboardHeader.dart';
-import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
+import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'Shop.dart';
 
 class UserDashBoard extends StatefulWidget {
   @override
@@ -8,6 +9,8 @@ class UserDashBoard extends StatefulWidget {
 }
 
 class _UserDashBoardState extends State<UserDashBoard> {
+  int _selectedIndex = 0;
+  PageController _pageController = PageController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,19 +22,6 @@ class _UserDashBoardState extends State<UserDashBoard> {
             ],
           ),
         ),
-      ),
-      bottomNavigationBar: FancyBottomNavigation(
-        tabs: [
-          TabData(iconData: Icons.home, title: "Home",),
-          TabData(iconData: Icons.add_shopping_cart, title: "Shop"),
-          TabData(iconData: Icons.person, title: "Profile")
-        ],
-        circleColor: Colors.black,
-        inactiveIconColor: Colors.black,
-        onTabChangedListener: (position) {
-          setState(() {
-          });
-        },
       ),
     );
   }
