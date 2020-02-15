@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:wellwasted2/Pages/Shop.dart';
 import 'package:wellwasted2/Pages/UserDashBoard.dart';
 class ScrollPages extends StatefulWidget {
   @override
@@ -34,7 +35,7 @@ class _ScrollPagesState extends State<ScrollPages> {
           },
           children: <Widget>[
             UserDashBoard(),
-            Container(color: Colors.red,),
+            Shop(),
             Container(color: Colors.green,),
             Container(color: Colors.blue,),
           ],

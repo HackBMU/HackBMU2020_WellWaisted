@@ -11,10 +11,16 @@ class _ShopState extends State<Shop> {
     return Scaffold(
       body: Container(
         margin: EdgeInsets.only(top: 50),
-        child: Column(
-          children:<Widget>[
-            Text("3 Kilogram - 5 Kilograms"),
-          ]
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children:<Widget>[
+              Text("3 Kilogram - 5 Kilograms",style: TextStyle(fontSize: 30),),
+              Text("5 Kilogram - 7 Kilograms",style: TextStyle(fontSize: 30)),
+              Text("7 Kilogram - 9 Kilograms",style: TextStyle(fontSize: 30)),
+              Text("More than 9 kilograms",style: TextStyle(fontSize: 30))
+            ]
+          ),
         ),
       ),
     );
