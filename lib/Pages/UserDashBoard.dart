@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:wellwasted2/Models/DashboardHeader.dart';
+import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
 
 class UserDashBoard extends StatefulWidget {
   @override
@@ -19,6 +19,19 @@ class _UserDashBoardState extends State<UserDashBoard> {
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: FancyBottomNavigation(
+        tabs: [
+          TabData(iconData: Icons.home, title: "Home",),
+          TabData(iconData: Icons.add_shopping_cart, title: "Shop"),
+          TabData(iconData: Icons.person, title: "Profile")
+        ],
+        circleColor: Colors.black,
+        inactiveIconColor: Colors.black,
+        onTabChangedListener: (position) {
+          setState(() {
+          });
+        },
       ),
     );
   }

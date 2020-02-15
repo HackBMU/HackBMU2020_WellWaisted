@@ -14,7 +14,7 @@ class DashboardHeader extends StatelessWidget {
       child:CircleAvatar(
         radius: 50,
         backgroundColor: Colors.black,
-        child: Icon(Icons.person,size: 80,color: Colors.green,),
+        child: Icon(Icons.person,size: 80,color: Colors.white,),
       )
     );
   }
