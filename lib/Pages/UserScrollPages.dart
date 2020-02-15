@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:wellwasted2/Pages/NotificationTab.dart';
-import 'package:wellwasted2/Pages/Shop.dart';
 import 'package:wellwasted2/Pages/UserDashBoard.dart';
-class ScrollPages extends StatefulWidget {
+class UserScrollPages extends StatefulWidget {
   @override
-  _ScrollPagesState createState() => _ScrollPagesState();
+  _UserScrollPagesState createState() => _UserScrollPagesState();
 }
 
-class _ScrollPagesState extends State<ScrollPages> {
+class _UserScrollPagesState extends State<UserScrollPages> {
 
   int _currentIndex = 0;
   PageController _pageController;
@@ -36,7 +35,6 @@ class _ScrollPagesState extends State<ScrollPages> {
           },
           children: <Widget>[
             UserDashBoard(),
-            Shop(),
             NotificationTab(),
             Container(color: Colors.blue,),
           ],
@@ -52,10 +50,6 @@ class _ScrollPagesState extends State<ScrollPages> {
           BottomNavyBarItem(
               title: Text('Home',style: TextStyle(color: Colors.black),),
               icon: Icon(Icons.home, color: Colors.black,)
-          ),
-          BottomNavyBarItem(
-              title: Text('Shop',style: TextStyle(color: Colors.black),),
-              icon: Icon(Icons.add_shopping_cart,color: Colors.black,)
           ),
           BottomNavyBarItem(
               title: Text('Notifications',style: TextStyle(color: Colors.black),),

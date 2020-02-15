@@ -11,10 +11,16 @@ class DashboardHeader extends StatelessWidget {
         borderRadius: BorderRadius.only(bottomRight: Radius.circular(50.0)
             ,bottomLeft: Radius.circular(50)
       )),
-      child:CircleAvatar(
-        radius: 50,
-        backgroundColor: Colors.black,
-        child: Icon(Icons.person,size: 80,color: Colors.white,),
+      child:Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          CircleAvatar(
+            radius: 50,
+            backgroundColor: Colors.black,
+            child: Icon(Icons.person,size: 100,color: Colors.white,),
+          ),
+          Icon(Icons.account_balance_wallet,color: Colors.white,size: 40,)
+        ],
       )
     );
   }
