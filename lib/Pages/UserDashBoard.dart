@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:wellwasted2/Models/DashboardHeader.dart';
 import 'package:wellwasted2/Models/ShopProducts.dart';
+import 'package:wellwasted2/Pages/NearestRaddiwala.dart';
 
 
 class UserDashBoard extends StatefulWidget {
@@ -21,7 +22,13 @@ class _UserDashBoardState extends State<UserDashBoard> {
               SizedBox(height: 20,),
               Container(
                 padding: EdgeInsets.all(10),
-                child:Text("Call RaddiWala",style: TextStyle(color: Colors.white,fontSize: 30),),
+                child:InkWell(child: Text("Call RaddiWala",style: TextStyle(color: Colors.white,fontSize: 30),),
+                onTap: (){
+                  setState(() {
+                    Navigator.push(context, MaterialPageRoute(builder:(context) => NearestRaddiWala()));
+                  });
+
+                },),
                 decoration: BoxDecoration(
                   color: Colors.black,
                   borderRadius: BorderRadius.all(Radius.circular(50))

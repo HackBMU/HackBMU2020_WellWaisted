@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:wellwasted2/Pages/EmployeeDashBoard.dart';
+import 'package:wellwasted2/Pages/Iventory.dart';
 import 'package:wellwasted2/Pages/NotificationTab.dart';
 
 class EmployeeScrollPages extends StatefulWidget {
@@ -36,7 +37,7 @@ class _EmployeeScrollPagesState extends State<EmployeeScrollPages> {
           },
           children: <Widget>[
             EmployeeDashBoard(),
-            NotificationTab(),
+            Inventory(),
             Container(color: Colors.blue,),
           ],
         ),
@@ -53,8 +54,8 @@ class _EmployeeScrollPagesState extends State<EmployeeScrollPages> {
               icon: Icon(Icons.home, color: Colors.black,)
           ),
           BottomNavyBarItem(
-              title: Text('Notifications',style: TextStyle(color: Colors.black),),
-              icon: Icon(Icons.notifications,color: Colors.black,)
+              title: Text('Inventory',style: TextStyle(color: Colors.black),),
+              icon: Icon(Icons.local_convenience_store,color: Colors.black,)
           ),
           BottomNavyBarItem(
               title: Text('Settings',style: TextStyle(color: Colors.black),),

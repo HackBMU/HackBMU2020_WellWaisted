@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wellwasted2/Pages/BusinessRegistration.dart';
 import 'package:wellwasted2/Pages/EmployeeScrollPages.dart';
 import 'package:wellwasted2/Pages/LocalRecyclerScroll.dart';
 import 'package:wellwasted2/Pages/UserScrollPages.dart';
@@ -19,18 +20,19 @@ class _LoginScreensState extends State<LoginScreens> {
             return EmployeeScrollPages();
           }));
         },
-        child: Text("I am Employee"),),
+        child: Text("I am Employee",style: TextStyle(fontSize: 40),),),
         RaisedButton(onPressed: (){ Navigator.push(context, MaterialPageRoute(builder:(context){
           return UserScrollPages();
         }));
         },
-        child: Text("I am User"),),
+        child: Text("I am User",style: TextStyle(fontSize: 40),),),
+
         RaisedButton(onPressed: (){
           Navigator.push(context, MaterialPageRoute(builder:(context){
             return LocalRecyclerScrollPages();
           }));
         },
-        child: Text("I am Radddiwala"),),
+        child: Text("I am Radddiwala",style: TextStyle(fontSize: 40),),),
       ],
     );
   }
