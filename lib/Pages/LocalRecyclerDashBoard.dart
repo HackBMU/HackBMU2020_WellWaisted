@@ -15,20 +15,20 @@ class _LocalRecyclerDashBoardState extends State<LocalRecyclerDashBoard> {
       body: Container(
         child: Column(
           children: <Widget>[
-            DashboardHeader(),
+            DashboardHeader(display: 1,),
             SizedBox(height: 25,width: 25,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-              Stats(title:"Plastic",amount:100),
-              Stats(title:"Paper",amount:100),
+              Stats(title:"Plastic",amount:67),
+              Stats(title:"Paper",amount:152),
             ],),
             SizedBox(height: 25,width: 25,),
             Row(
               mainAxisAlignment:MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-              Stats(title:"Scrap",amount:100),
-              Stats(title:"House Visits",amount: 100,)
+              Stats(title:"Scrap",amount:97),
+              Stats(title:"House Visits",amount: 200,)
             ],)
           ],
         ),

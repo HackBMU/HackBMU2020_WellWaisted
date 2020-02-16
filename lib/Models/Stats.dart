@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Stats extends StatelessWidget {
   final String title;
-  final double amount;
+  final int amount;
 
   Stats({this.title,this.amount});
   @override
@@ -13,7 +13,7 @@ class Stats extends StatelessWidget {
         width: MediaQuery.of(context).size.width/2,
         height: MediaQuery.of(context).size.width/2,
         decoration: BoxDecoration(
-          color: Colors.black,
+          color: Colors.green,
           shape: BoxShape.circle
         ),
         child: Column(
@@ -21,7 +21,7 @@ class Stats extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Text(this.title, style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold),),
-            Text(this.amount.toString(),style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold),)
+            Text(this.amount == null ? "": this.amount.toString(),style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold),)
           ],
         ),
       ),

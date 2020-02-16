@@ -38,7 +38,16 @@ class _EmployeeScrollPagesState extends State<EmployeeScrollPages> {
           children: <Widget>[
             EmployeeDashBoard(),
             Inventory(),
-            Container(color: Colors.blue,),
+            Container(
+              child: ListView(
+                children: <Widget>[
+                  ListTile(leading:Icon(Icons.person,size: 50,color: Colors.green,),title: Text("Ram singh, 934798147981,",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),),
+                  ListTile(leading:Icon(Icons.person,size: 50,color: Colors.green,),title: Text("Nikhil, 934798147981,",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20)),),
+                  ListTile(leading:Icon(Icons.person,size: 50,color: Colors.green,),title: Text("Ankit, 934798147981,",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20)),),
+                  ListTile(leading:Icon(Icons.person,size: 50,color: Colors.green,),title: Text("Sahil, 934798147981,",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20)),),
+                ],
+              ),
+            )
           ],
         ),
       ),
@@ -58,8 +67,8 @@ class _EmployeeScrollPagesState extends State<EmployeeScrollPages> {
               icon: Icon(Icons.local_convenience_store,color: Colors.black,)
           ),
           BottomNavyBarItem(
-              title: Text('Settings',style: TextStyle(color: Colors.black),),
-              icon: Icon(Icons.settings,color: Colors.black,)
+              title: Text('Connections',style: TextStyle(color: Colors.black,fontSize: 12),),
+              icon: Icon(Icons.people,color: Colors.black,)
           ),
         ],
       ),

@@ -18,7 +18,7 @@ class _UserDashBoardState extends State<UserDashBoard> {
         child: Center(
           child: Column(
             children: <Widget>[
-              DashboardHeader(),
+              DashboardHeader(iconData: Icons.account_balance_wallet,name: "Ankita Sharma",display: 1,),
               SizedBox(height: 20,),
               Container(
                 padding: EdgeInsets.all(10),
@@ -30,7 +30,7 @@ class _UserDashBoardState extends State<UserDashBoard> {
 
                 },),
                 decoration: BoxDecoration(
-                  color: Colors.black,
+                  color: Colors.green,
                   borderRadius: BorderRadius.all(Radius.circular(50))
                 ),
               ),
@@ -39,14 +39,14 @@ class _UserDashBoardState extends State<UserDashBoard> {
                   height: MediaQuery.of(context).size.height/2,
                   child: ListView(
                     children: <Widget>[
-                      ListTile(leading : Icon(Icons.web_asset,color: Colors.black,),title: Text("3 Kilogram - 5 Kilograms",style: TextStyle(fontSize: 25,color: Colors.black),),),
-                      ShopProducts(imageData: Image(image:AssetImage("images/santa.jpg")),),
-                      ListTile(leading : Icon(Icons.web_asset,color: Colors.black,),title: Text("5 Kilogram - 7 Kilograms",style: TextStyle(fontSize: 25,color: Colors.black),),),
-                      ShopProducts(imageData: Image(image:AssetImage("images/flowers.jpg")),),
-                      ListTile(leading : Icon(Icons.web_asset,color: Colors.black,),title: Text("7 Kilogram - 9 Kilograms",style: TextStyle(fontSize: 25,color: Colors.black),),),
-                      ShopProducts(imageData: Image(image:AssetImage("images/pen.jpg")),),
-                      ListTile(leading : Icon(Icons.web_asset,color: Colors.black,),title: Text("More Than 9 Kilograms",style: TextStyle(fontSize: 25,color: Colors.black),),),
-                      ShopProducts(imageData: Image(image:AssetImage("images/plants.jpg"))),
+                      ListTile(leading : Icon(Icons.web_asset,color: Colors.green,),title: Text("3 Kilogram - 5 Kilograms",style: TextStyle(fontSize: 20,color: Colors.black),),),
+                      ShopProducts(imageData: Image(image:AssetImage("images/tote_bags.jpg")),textData: "Tote bags",),
+                      ListTile(leading : Icon(Icons.web_asset,color: Colors.green,),title: Text("5 Kilogram - 7 Kilograms",style: TextStyle(fontSize: 20,color: Colors.black),),),
+                      ShopProducts(imageData: Image(image:AssetImage("images/flowers.jpg")),textData: "Flowers",),
+                      ListTile(leading : Icon(Icons.web_asset,color: Colors.green,),title: Text("7 Kilogram - 9 Kilograms",style: TextStyle(fontSize: 20,color: Colors.black),),),
+                      ShopProducts(imageData: Image(image:AssetImage("images/pen.jpg")),textData: "Diary",),
+                      ListTile(leading : Icon(Icons.web_asset,color: Colors.green,),title: Text("More Than 9 Kilograms",style: TextStyle(fontSize: 20,color: Colors.black),),),
+                      ShopProducts(imageData: Image(image:AssetImage("images/plants.jpg")),textData: "Plants",),
                     ],
                   ),
                 ),

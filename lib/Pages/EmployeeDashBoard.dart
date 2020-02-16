@@ -17,20 +17,20 @@ class _EmployeeDashBoardState extends State<EmployeeDashBoard> {
       body: Container(
         child: Column(
           children: <Widget>[
-            DashboardHeader(),
+            DashboardHeader(display: 1,name: "Isha Sharma",),
             
             SizedBox(height: 25,width: 25,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                Stats(title:"Items Sold",amount:100),
-                Stats(title:"GrowthChart",amount:100),
+                Stats(title:"Items Sold",amount:93),
+                Stats(title:"Earning(INR)",amount:30000),
               ],),
             SizedBox(height: 25,width: 25,),
             Row(
               mainAxisAlignment:MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                Stats(title:"Earnings",amount: 100,),
+                Stats(title:"Profit %",amount: 51,),
                 Stats(title:"Referrals",amount: 100,)
               ],)
           ],

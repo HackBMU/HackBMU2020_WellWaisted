@@ -7,7 +7,7 @@ class NotificationView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(10),
-      decoration: BoxDecoration(color: Colors.black,
+      decoration: BoxDecoration(color: Colors.green,
       borderRadius: BorderRadius.all(Radius.circular(20))),
       child: ListTile(
         leading: Icon(Icons.person,color: Colors.white,size: 50,),

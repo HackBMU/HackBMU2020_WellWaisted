@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
-import 'package:wellwasted2/Pages/Iventory.dart';
-import 'package:wellwasted2/Pages/NotificationTab.dart';
+import 'package:wellwasted2/Models/DashboardHeader.dart';
+import 'package:wellwasted2/Models/Stats.dart';
 import 'package:wellwasted2/Pages/UserDashBoard.dart';
+import 'package:wellwasted2/Pages/UserNotifies.dart';
 class UserScrollPages extends StatefulWidget {
   @override
   _UserScrollPagesState createState() => _UserScrollPagesState();
@@ -36,8 +37,33 @@ class _UserScrollPagesState extends State<UserScrollPages> {
           },
           children: <Widget>[
             UserDashBoard(),
-            NotificationTab(),
-            Container(color: Colors.blue,),
+            UserNotifies(),
+            Scaffold(body: Container(
+              child: Column(
+                children: <Widget>[
+                  DashboardHeader(padding:50,name: "Ankita Sharma",address: "375,VV Nagar, Ajmeri Gate, Jaipur",),
+                  SizedBox(height: 25,width: 25,),
+                  Container(
+                    child: Column(
+                      children: <Widget>[
+                        Text("Ankita Sharma",style: TextStyle(color: Colors.green,fontWeight: FontWeight.bold),),
+                        Text("Mobile No.: 280w42380",style: TextStyle(color:Colors.green,fontWeight: FontWeight.bold),),
+                        Text("375,VV Nagar, Ajmeri Gate, Jaipur",style: TextStyle(color:Colors.green,fontWeight: FontWeight.bold),)
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        Stats(title:"Plastic",amount:100),
+                        Stats(title:"Paper",amount:100),
+                      ],),
+                  ),
+                  SizedBox(height: 25,width: 25,),
+                ],
+              ),
+            ),),
           ],
         ),
       ),
@@ -57,8 +83,8 @@ class _UserScrollPagesState extends State<UserScrollPages> {
               icon: Icon(Icons.notifications,color: Colors.black,)
           ),
           BottomNavyBarItem(
-              title: Text('Settings',style: TextStyle(color: Colors.black),),
-              icon: Icon(Icons.settings,color: Colors.black,)
+              title: Text('Profile',style: TextStyle(color: Colors.black),),
+              icon: Icon(Icons.person,color: Colors.black,)
           ),
         ],
       ),
